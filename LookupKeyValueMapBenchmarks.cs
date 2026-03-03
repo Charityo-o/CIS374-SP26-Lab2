@@ -20,7 +20,7 @@ namespace Lab1
         public AVLTreeMap<int, int> avlTree = new AVLTreeMap<int, int>();
         public RedBlackTreeMap<int, int> redBlackTree = new RedBlackTreeMap<int, int>();
 
-        [Params(100, 200)]
+        [Params(100, 1_000, 10_000, 100_000, 1_000_000)]
         public int N;
 
         [Params(true, false)]

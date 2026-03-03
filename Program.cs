@@ -8,20 +8,23 @@ class Program
 {
     static void Main(string[] args)
     {
-        var data = BenchmarkRunner.Run<StringBenchmark>();
+        // var data = BenchmarkRunner.Run<StringBenchmark>();
 
-        //var data = BenchmarkRunner.Run<InsertKeyValueMapBenchmarks>();
+        // var data = BenchmarkRunner.Run<InsertKeyValueMapBenchmarks>();
+        // var data = BenchmarkRunner.Run<LookupKeyValueMapBenchmarks>();
+        // var data = BenchmarkRunner.Run<RemoveKeyValueMapBenchmarks>();
 
-        // int n = 100;
-        // var heightRandom = new HeightKeyValueMapBenchmarks(n, true);
-        // double heightBST = heightRandom.HeightOfBST();
-        // double heightAVL = heightRandom.HeightOfAVLTree();
-        // double heightRB = heightRandom.HeightOfRedBlackTree();
+        
+        int n = 1000000;
+        var heightRandom = new HeightKeyValueMapBenchmarks(n, false);
+        double heightBST = heightRandom.HeightOfBST();
+        double heightAVL = heightRandom.HeightOfAVLTree();
+        double heightRB = heightRandom.HeightOfRedBlackTree();
 
-        // System.Console.WriteLine($"Height (n={n})");
-        // System.Console.WriteLine($"BST: {heightBST}");
-        // System.Console.WriteLine($"AVL: {heightAVL}");
-        // System.Console.WriteLine($"Red-Black: {heightRB}");
+        System.Console.WriteLine($"Height (n={n})");
+        System.Console.WriteLine($"BST: {heightBST}");
+        System.Console.WriteLine($"AVL: {heightAVL}");
+        System.Console.WriteLine($"Red-Black: {heightRB}");
 
 
     }

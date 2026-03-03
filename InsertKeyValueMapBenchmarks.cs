@@ -10,7 +10,7 @@ namespace Lab1
 	{
 		public List<KeyValuePair<int, int>>? keyValuePairs;
 
-		[Params(100, 1_000, 10_000, 100_000)]
+		[Params(100, 1_000, 10_000, 100_000, 1_000_000)]
 		public int N;
 
         [Params(true, false)]
@@ -32,7 +32,7 @@ namespace Lab1
             }
         }
 
-        [Benchmark]
+        // [Benchmark]
 		public void InsertIntoDictionary( )
 		{
 			var dictionary = new Dictionary<int, int>();
@@ -54,7 +54,7 @@ namespace Lab1
             }
         }
 
-        [Benchmark]
+        // [Benchmark]
         public void InsertIntoAVLTree()
         {
             var avltree = new AVLTreeMap<int, int>();
@@ -65,7 +65,7 @@ namespace Lab1
             }
         }
 
-        [Benchmark]
+        // [Benchmark]
         public void InsertIntoRedBlackTree()
         {
             var rbtree = new RedBlackTreeMap<int, int>();
